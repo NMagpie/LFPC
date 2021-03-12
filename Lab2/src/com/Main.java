@@ -4,7 +4,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.*;
 
-public class Main {
+public class Main { //input is by file "input.txt". Every rule is written in given form (int)-(char)(int),
+    // where first integer shows, which is the index of the node, char - terminal symbol and second integer
+    // is where reffers this node. Also, you should write "-" before starting node (you have to do it at least one time)
+    // or "*" if it is terminal node. if node does not reffers to any other node just write (int)-eps
 
     static FileReader fr;
 
@@ -29,13 +32,11 @@ public class Main {
 
         //Parsing.printable();
 
-        p.print();
+        //p.print();
 
         Conversion conversion = new Conversion(Parsing.finish,Parsing.table,Parsing.start,Parsing.setchar);
 
         conversion.converse();
-
-        System.out.println("\n");
 
         //Conversion.printable();
 

@@ -1,6 +1,6 @@
 package com;
 
-public class Pair {
+public class Pair { //Pair class, that is used as key for all the maps
     private int value;
     private char ch;
 
@@ -28,7 +28,8 @@ public class Pair {
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode() { //i had to rewrite those methods just because standard methods are so lame and did
+        // not worked as I wanted
         return this.value*100+this.getCh()-'a';
     }
 
