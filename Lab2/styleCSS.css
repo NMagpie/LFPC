@@ -1,0 +1,18 @@
+node {
+    size:         35px;
+    shape:        circle;
+    fill-color:   #8facb4;
+    stroke-mode:  plain;
+    stroke-color: black;
+    text-size:	  20;
+/*fill-mode: gradient-diagonal2;*/
+}
+
+edge {
+    size:           2px;
+    fill-mode:      plain;
+    text-size:      20;
+    text-offset:    10px, 0px;
+    text-mode:      normal;
+    text-alignment: along;
+}
