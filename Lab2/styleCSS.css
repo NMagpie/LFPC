@@ -14,5 +14,19 @@ edge {
     text-size:      20;
     text-offset:    10px, 0px;
     text-mode:      normal;
-    text-alignment: along;
+    text-alignment: under;
+}
+
+sprite.start {
+    shape: box;
+    size: 32px, 32px;
+    fill-mode: image-scaled;
+    fill-image: url('triangle.png');
+}
+
+sprite.finish {
+    shape: box;
+    size: 45px, 45px;
+    fill-mode: image-scaled;
+    fill-image: url('circle.png');
 }
