@@ -10,6 +10,12 @@ public class Main { //input is by file "input.txt". Every rule is written in giv
     // where first integer shows, which is the index of the node, char - terminal symbol and second integer
     // is where reffers this node. Also, you should write "-" before starting node (you have to do it at least one time)
     // or "*" if it is terminal node. if node does not reffers to any other node just write (int)-eps
+    //the only thing is that this graph showing library is not so good, so some loop edges' labels (weights) can overlap eachother
+    
+    //THE IMPORTANT THING IS THAT YOU CAN MOVE GRAPH DRAGGING THE NODES
+    
+    
+    //42
 
     static FileReader fr;
 
