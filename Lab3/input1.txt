@@ -1,0 +1,12 @@
+S-aB
+S-A
+A-bAa
+A-a
+A-a
+B-AbB
+B-B
+B-a
+B-!
+C-BA
+D-a
+S-!

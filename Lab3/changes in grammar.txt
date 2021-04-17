@@ -1,0 +1,3 @@
+{A=[bAa, aS, a], B=[AbB, BS, a, Ab, S], S=[aB, A, a], C=[BA, A], D=[a], S0=[S]}
+{A=[bAa, aS, a], B=[AbB, BS, a, Ab, S], S=[aB, A, a], S0=[S]}
+{A=[bAa, aS, a], B=[AbB, BS, a, Ab, aB, bAa, aS], S=[aB, a, bAa, aS], S0=[aB, a, bAa, aS]}
