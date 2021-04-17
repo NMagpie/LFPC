@@ -266,6 +266,7 @@ public class Parsing {
                 str = values.get(i);
                 ArrayList<String> res = new ArrayList(Arrays.asList(str.split("(?=(?:Q[0-9]+|[A-Z]))")));
                 while (res.size() > 2) {
+                    res = new ArrayList(Arrays.asList(str.split("(?=(?:Q[0-9]+|[A-Z]))")));
                     String temp = res.get(0) + res.get(1);
                     toAdd.put("Q" + numberOfQ, new ArrayList(Collections.singletonList(temp)));
                     values.remove(str);
@@ -274,16 +275,16 @@ public class Parsing {
                     for (ArrayList<String> rules : grammar.values())
                         for (int j = 0; j < rules.size(); j++) {
                             String rule = rules.get(j);
-                            if (!rule.equals(temp)) {
+                            if (!rule.equals(temp)&&rule.contains(temp)) {
                                 rules.remove(j);
                                 rule = rule.replace(temp, "Q" + numberOfQ);
                                 rules.add(j, rule);
                             }
                         }
-                    numberOfQ++;
                     res.remove(0);
                     res.remove(1);
                     res.add(0, "Q" + numberOfQ);
+                    numberOfQ++;
                 }
             }
         }
