@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 S-aB
 S-A
 A-bAa
@@ -8,4 +9,16 @@ B-BS
 B-a
 B-!
 C-BA
+=======
+S-aB
+S-A
+A-bAa
+A-aS
+A-a
+B-AbB
+B-BS
+B-a
+B-!
+C-BA
+>>>>>>> 69c17f4c21e12b35b96f1b805eb6037471e09a37
 D-a
