@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 S-aB
 S-A
 A-bAa
@@ -9,42 +8,4 @@ B-BS
 B-a
 B-!
 C-BA
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-S-aB
-S-A
-A-bAa
-A-aS
-A-a
-B-AbB
-B-BS
-B-a
-B-!
-C-BA
-=======
-S-aB
-S-A
-A-bAa
-A-aS
-A-a
-B-AbB
-B-BS
-B-a
-B-!
-C-BA
->>>>>>> cef7ed740079ebdf612c16e6fbc9ac7a7782fef4
-=======
-S-aB
-S-A
-A-bAa
-A-aS
-A-a
-B-AbB
-B-BS
-B-a
-B-!
-C-BA
->>>>>>> cef7ed740079ebdf612c16e6fbc9ac7a7782fef4
->>>>>>> 69c17f4c21e12b35b96f1b805eb6037471e09a37
 D-a
