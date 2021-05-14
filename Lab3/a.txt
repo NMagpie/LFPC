@@ -11,6 +11,7 @@ Moving terminals:
 если содержит терминал и терминал не равен строке => генерируем новый нон-терминал q(n) и вставляем в него терминал
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 if B->A => entry.getValue().get(i) = A entry.getKey()|entry.geyValue = B
 все правила A переносим в B
 удаляем это правило в самом B
@@ -21,6 +22,18 @@ if B->A => entry.getValue().get(i) = A entry.getKey()|entry.geyValue = B
 Moving terminals:
 
 если содержит терминал и терминал не равен строке => генерируем новый нон-терминал q(n) и вставляем в него терминал
+=======
+if B->A => entry.getValue().get(i) = A entry.getKey()|entry.geyValue = B
+все правила A переносим в B
+удаляем это правило в самом B
+если A->A =>
+просто удаляем правило
+и еще S0->S (не забыть!!!)
+
+Moving terminals:
+
+если содержит терминал и терминал не равен строке => генерируем новый нон-терминал q(n) и вставляем в него терминал
+>>>>>>> cef7ed740079ebdf612c16e6fbc9ac7a7782fef4
 =======
 if B->A => entry.getValue().get(i) = A entry.getKey()|entry.geyValue = B
 все правила A переносим в B
