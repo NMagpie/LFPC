@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 S-LdF
 F-E
 L-ca
@@ -5,4 +7,22 @@ L-La
 E-b
 E-Eeb
 end
+=======
+S-LdF
+F-E
+L-ca
+L-La
+E-b
+E-Eeb
+end
+>>>>>>> cef7ed740079ebdf612c16e6fbc9ac7a7782fef4
+=======
+S-LdF
+F-E
+L-ca
+L-La
+E-b
+E-Eeb
+end
+>>>>>>> cef7ed740079ebdf612c16e6fbc9ac7a7782fef4
 caadbeb

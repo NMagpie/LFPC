@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 node {
     size:         35px;
     shape:        circle;
@@ -16,4 +18,44 @@ edge {
     text-offset:    10px, 0px;
     text-mode:      normal;
     text-alignment: under;
+=======
+node {
+    size:         35px;
+    shape:        circle;
+    fill-color:   #8facb4;
+    stroke-mode:  plain;
+    stroke-color: black;
+    text-mode:	  normal;
+    text-size:	  20;
+/*fill-mode: gradient-diagonal2;*/
+}
+
+edge {
+    size:           2px;
+    fill-mode:      plain;
+    text-size:      20;
+    text-offset:    10px, 0px;
+    text-mode:      normal;
+    text-alignment: under;
+>>>>>>> cef7ed740079ebdf612c16e6fbc9ac7a7782fef4
+=======
+node {
+    size:         35px;
+    shape:        circle;
+    fill-color:   #8facb4;
+    stroke-mode:  plain;
+    stroke-color: black;
+    text-mode:	  normal;
+    text-size:	  20;
+/*fill-mode: gradient-diagonal2;*/
+}
+
+edge {
+    size:           2px;
+    fill-mode:      plain;
+    text-size:      20;
+    text-offset:    10px, 0px;
+    text-mode:      normal;
+    text-alignment: under;
+>>>>>>> cef7ed740079ebdf612c16e6fbc9ac7a7782fef4
 }
