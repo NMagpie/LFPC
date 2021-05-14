@@ -1,0 +1,8 @@
+S-aA
+A-C
+A-CbA
+C-dB
+B-b
+B-aB
+end
+adbbdb
