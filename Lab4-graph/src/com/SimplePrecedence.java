@@ -7,9 +7,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.*;
 
-    //ask about cycles in the grammar
-    //some grammars have two "e"'s, what does it mean?
-
 public class SimplePrecedence {
 
     private static final TreeSet<Character> allSymbols = new TreeSet<>();
@@ -36,21 +33,26 @@ public class SimplePrecedence {
 
         String s;
 
+        System.out.println("\nGrammar:\n");
+
         while ((sc.hasNextLine()) && (!(s = sc.nextLine()).equals("end"))) {
             if (s.matches("[A-Z]-[^<>=]+")) {
+                System.out.println(s.substring(0,2)+">"+s.substring(2));
                 for (int i = 0; i < s.length(); i++)
                     if (i != 1) allSymbols.add(s.charAt(i));
                 putIntoGrammar(s.charAt(0), s.substring(2));
                 reverseGrammar.put(s.substring(2), s.charAt(0));
             } else {
-                System.out.println("The incorrect input of the rules! Also, grammar cannot contain symbols like: \"<\", \">\" or \"=\".");
+                System.out.println("\nThe incorrect input of the rules! Also, grammar cannot contain symbols like: \"<\", \">\" or \"=\".");
                 System.exit(0);
             }
         }
         if (!sc.hasNextLine()) {
-            System.out.println("Input is incorrect! after introducing grammar type \"end\" and then strings you want to parse!");
+            System.out.println("\nInput is incorrect! after introducing grammar type \"end\" and then strings you want to parse!");
             System.exit(0);
         }
+
+        System.out.println();
 
     }
 
@@ -73,15 +75,15 @@ public class SimplePrecedence {
             setLast(Key);
         }
 
+        showFirstLast();
+
         matrixBuilding();
+
+        showMatrix();
 
         /*System.out.println("Grammar "+grammar);
         System.out.println("allSymbols "+allSymbols);
-        showMatrix();
         System.out.println(reverseGrammar);*/
-
-        System.out.println("First "+first);
-        System.out.println("Last "+last);
 
         while (sc.hasNextLine())
             transformingInput(sc.nextLine());
@@ -122,6 +124,29 @@ public class SimplePrecedence {
         return set;
     }
 
+    private static void showFirstLast() {
+        System.out.println("First/Last table:\n");
+
+        int firstMaxLength =0;
+
+        for (char Key:first.keySet())
+            if (first.get(Key).size()>firstMaxLength) firstMaxLength=first.get(Key).size();
+
+        System.out.print("    F");
+        for (int i=0;i<firstMaxLength;i++)
+            System.out.print("   ");
+        System.out.println("L");
+
+        for (char Key:first.keySet()) {
+            System.out.print(Key+" | "+first.get(Key).toString().replace("[","").replace("]",""));
+            for (int i=first.get(Key).size();i<firstMaxLength;i++)
+                System.out.print("   ");
+            System.out.println(" | "+last.get(Key).toString().replace("[","").replace("]",""));
+        }
+
+        System.out.println();
+    }
+
     private static void matrixBuilding() {
         for (HashSet<String> RHSet : grammar.values())
             for (String RHS : RHSet)
@@ -154,19 +179,21 @@ public class SimplePrecedence {
     }
 
     private static void showMatrix() {
-        System.out.print("  ");
+        System.out.println("Simple Precedence Matrix:\n");
+        System.out.print("    ");
         for (char symbol : allSymbols)
-            System.out.print(symbol + " ");
+            System.out.print(symbol + " | ");
         System.out.println();
         int i = 0;
         for (char symbol : allSymbols) {
-            System.out.print(symbol + " ");
+            System.out.print(symbol + " | ");
             for (int j = 0; j < matrix.length; j++) {
-                System.out.print(matrix[i][j] + " ");
+                System.out.print(matrix[i][j] + " | ");
             }
             System.out.println();
             i++;
         }
+        System.out.println();
     }
 
     private static int indexOf(char element) {
@@ -187,7 +214,9 @@ public class SimplePrecedence {
 
     private static void transformingInput(String s) {
 
-        System.out.println(s);
+        System.out.print("Parsing the string: ");
+
+        System.out.println(s+"\n");
 
         if (!s.matches("[^A-Z]+")) {
             System.out.println("The string was not parsed!\n");
@@ -225,7 +254,6 @@ public class SimplePrecedence {
 
         graph = new SingleGraph(Long.toString(System.currentTimeMillis()));
         graph.setAttribute("ui.stylesheet", "url(styleCSS.css);");
-        //graph.setAttribute("text-size","100pt");
         graph.setAttribute("ui.quality");
         graph.setAttribute("ui.antialias");
 

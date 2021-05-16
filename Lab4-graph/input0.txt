@@ -5,6 +5,9 @@ C-e
 C-CfD
 D-h
 end
-a
+A
 efhfhbhg
 eg
+e
+efhfhbhbhg
+efhfhbhbhbg
